@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kaiyu9991.github.io">
-  <title>YK的个人博客</title>
+  <title>Archives: 2022/2 | YK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="YK的个人博客">
-<meta property="og:url" content="https://kaiyu9991.github.io/index.html">
+<meta property="og:url" content="https://kaiyu9991.github.io/archives/2022/02/index.html">
 <meta property="og:site_name" content="YK的个人博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="YK">
@@ -152,285 +152,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/26/SpringBoot/">SpringBoot</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/26/SpringBoot/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/02/26/SpringBoot/" class="archive-article-date">
   	<time datetime="2022-02-26T13:24:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一-SpringBoot快速入门"><a href="#一-SpringBoot快速入门" class="headerlink" title="一 SpringBoot快速入门"></a>一 SpringBoot快速入门</h3><h4 id="1-项目快速启动"><a href="#1-项目快速启动" class="headerlink" title="1 项目快速启动"></a>1 项目快速启动</h4><p>springboot的设计目的是简化spring初始搭建和开发过程</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225193855439.png" alt="image-20220225193855439"></p>
-<p>1.IEDA首先要集成maven</p>
-<p>2.<img src="/2022/02/26/SpringBoot/image-20220225185201999.png" alt="image-20220225185201999"></p>
-<p>3.</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225185459245.png" alt="image-20220225185459245"></p>
-<p>4.需要什么模块就勾选什么模块，这里只勾选Spring Web，spring工程就创建完成</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225185708775.png" alt="image-20220225185708775"></p>
-<p>5.在与启动类(Application类)同级的目录下，创建controller包，包下创建类为bookController类，写代码，再运行启动类，在浏览器输入 localhost:8080/book,即完成简单项目的快速启动（引导类里的注解扫描默认是扫描当前所在包及其子包）</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225193450025.png" alt="image-20220225193450025"></p>
-<h4 id="2-项目分析"><a href="#2-项目分析" class="headerlink" title="2 项目分析"></a>2 项目分析</h4><p>1.想用什么技术，maven中导入相应的starter，简便，比如原先需要多个依赖，现在只需要一个就行了。</p>
-<p>​    parent管理了所需用到的技术的版本，减少依赖冲突</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225200305583.png" alt="image-20220225200305583"></p>
-<p>2.引导类作用：springboot工程运行后初始化spring容器，扫描引导类所在包加载bean</p>
-<p>3.</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225203336302.png" alt="image-20220225203336302"></p>
-<p>内嵌tomcat，tomcat服务器是用java语言写的，java语言靠对象运行，对象交给spring管理，将tomcat容器的执行过程抽取出来变成一个对象，然后把这个对象交给spring容器去管理，现在spring容器里有一个tomcat对象，现在要运行的所有东西都在tomcat对象里去运行，这就是我们程序没有装tomcat服务器，还能启动起来并且带tomcat的原因。</p>
-<p>不想用tomcat，可以排除tomcat依赖，导入其他服务器如jetty依赖即可（jetty更轻量负载性能远不及tomcat）</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225203116109.png" alt="image-20220225203116109"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225202826408.png" alt="image-20220225202826408"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225202836965.png" alt="image-20220225202836965"></p>
-<h4 id="3-属性配置"><a href="#3-属性配置" class="headerlink" title="3 属性配置"></a>3 属性配置</h4><p>1.</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225204013666.png" alt="image-20220225204013666"></p>
-<p>2.springboot内置配置属性查询：<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties">Common Application Properties (spring.io)</a></p>
-<p>3.xml properties yaml 数据格式</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225205335452.png" alt="image-20220225205335452"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225205342699.png" alt="image-20220225205342699"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225205353860.png" alt="image-20220225205353860"></p>
-<p>4.</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225205848208.png" alt="image-20220225205848208"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225210110188.png" alt="image-20220225210110188"></p>
-<h4 id="4-整合第三方技术"><a href="#4-整合第三方技术" class="headerlink" title="4 整合第三方技术"></a>4 整合第三方技术</h4><h5 id="1-整合JUnit"><a href="#1-整合JUnit" class="headerlink" title="1 整合JUnit"></a>1 整合JUnit</h5><p><img src="/2022/02/26/SpringBoot/image-20220225211139948.png" alt="image-20220225211139948"></p>
-<h5 id="2-整合mybatis"><a href="#2-整合mybatis" class="headerlink" title="2 整合mybatis"></a>2 整合mybatis</h5><p><img src="/2022/02/26/SpringBoot/image-20220226181739028.png" alt="image-20220226181739028"></p>
-<p>原先整合的时候得考虑，第一，连什么数据库，是MySQL还是ORACLE数据库，第二，连哪个具体的用户，IP地址、端口、用户名等，第三，那什么权限去连，用户名密码是什么权限。还有mybatis的映射文件，你是用注解去写还是用xml配置去写。</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226183142782.png" alt="image-20220226183142782"></p>
-<h5 id="3-从数据库取数据"><a href="#3-从数据库取数据" class="headerlink" title="3.从数据库取数据"></a>3.从数据库取数据</h5><p>1）pom.xml导入对应的starter</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226192340489.png" alt="image-20220226192340489"></p>
-<p>2）application.yml配置文件配置相关信息</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226192450183.png" alt="image-20220226192450183"></p>
-<p>3）如用实体类接收，得写对应的实体类，数据类型得用包装类，且类中成员变量必须和表中列名相同</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226193311554.png" alt="image-20220226193311554"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226193329768.png" alt="image-20220226193329768"></p>
-<p>4）写一个映射接口</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226193410297.png" alt="image-20220226193410297"></p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226194218043.png" alt="image-20220226194218043"></p>
-<p>5）测试即可</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226193518769.png" alt="image-20220226193518769"></p>
-<h5 id="3-整合mybatis-plus"><a href="#3-整合mybatis-plus" class="headerlink" title="3.整合mybatis-plus"></a>3.整合mybatis-plus</h5><p>maven坐标查找主站：<a target="_blank" rel="noopener" href="https://mvnrepository.com/">Maven Repository: Search/Browse/Explore (mvnrepository.com)</a></p>
-<p>1）导入坐标</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226195235436.png" alt="image-20220226195235436"></p>
-<p>2）配置和mybaits 的相同，写实体类相同</p>
-<p>3）映射接口，不需要写具体语句了，只需要继承BaseMapper&lt;泛型&gt;，把实体类作为泛型传入即可，BaseMapper包含了增删改查的方法，继承以后在测试中直接用就可以</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226195824975.png" alt="image-20220226195824975"></p>
-<p>4）测试，mybaits-plus的表名和实体类是自动映射，如果对不上就会报错，得自己去设置</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226200548192.png" alt="image-20220226200548192"></p>
-<h5 id="4-整合Druid"><a href="#4-整合Druid" class="headerlink" title="4 整合Druid"></a>4 整合Druid</h5><p>mysql是一种关系型数据库（关系型数据库，是指采用了关系模型来组织数据的数据库，其以行和列的形式存储数据，以便于用户理解，关系型数据库这一系列的行和列被称为表，一组表组成了数据库）</p>
-<p>mybatis是持久层框架，它是支持JDBC的，它可以简化持久层的开发</p>
-<p>JDBC(java database connective)是java数据库连接，是一套用java语言来操作数据库的规范，各种不同类型的数据库都有相应的实现</p>
-<p>Druid和c3p0都是数据库连接池，可以提高数据库连接的性能，节省时间和资源</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226202738194.png" alt="image-20220226202738194"></p>
-<p>数据源是给数据库用的，所以在使用druid 的时候还得加上数据库(以mysql为例)</p>
-<p>1）导入坐标</p>
-<p>2）做对应的配置</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226210300188.png" alt="image-20220226210300188"></p>
-<p>3）其他与mybaits相同</p>
-<p>4）</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220226210546753.png" alt="image-20220226210546753"></p>
-<p>springboot框架之所以好用就是有大量默认的配置</p>
-<h3 id="二-注解"><a href="#二-注解" class="headerlink" title="二 注解"></a>二 注解</h3><p>1 @RestController</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225190624598.png" alt="image-20220225190624598"></p>
-<p>2 @RequestMapping(“/xx”)   可以作用与方法或者类上，表示在浏览器中输入的映射地址，就会执行相应的方法</p>
-<p><img src="/2022/02/26/SpringBoot/image-20220225192644648.png" alt="image-20220225192644648"></p>
-<h3 id="三-基于SpringBoot的SSMP整合案例"><a href="#三-基于SpringBoot的SSMP整合案例" class="headerlink" title="三 基于SpringBoot的SSMP整合案例"></a>三 基于SpringBoot的SSMP整合案例</h3><p><img src="/2022/02/26/SpringBoot/image-20220226211352656.png" alt="image-20220226211352656"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/26/SpringBoot/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-稳定的快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/07/%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">稳定的快速排序</a>
+      <a class="archive-article-title" href="/2022/02/26/SpringBoot/">SpringBoot</a>
     </h1>
   
 
-        
-        <a href="/2022/01/07/%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2022-01-07T13:41:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一-快速排序"><a href="#一-快速排序" class="headerlink" title="一 快速排序"></a>一 快速排序</h3><h5 id="1-1-原理"><a href="#1-1-原理" class="headerlink" title="1.1 原理"></a>1.1 原理</h5><p>​        快速排序是对冒泡排序的一种改进。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
-<h5 id="1-2-java实现："><a href="#1-2-java实现：" class="headerlink" title="1.2 java实现："></a>1.2 java实现：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Quick</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = &#123;<span class="number">4</span>,<span class="number">1</span>,<span class="number">45</span>,<span class="number">33</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">33</span>,<span class="number">29</span>,<span class="number">65</span>,<span class="number">4</span>,<span class="number">134</span>,<span class="number">32</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] arr2 = &#123;<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>&#125;;</span><br><span class="line"></span><br><span class="line">        sort(arr1,<span class="number">0</span>,arr1.length-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr1) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        sort(arr2,<span class="number">0</span>,arr2.length-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr2) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span> lo,<span class="keyword">int</span> hi)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(lo&gt;=hi)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> partition = partition(a,lo,hi);<span class="comment">//交换完，分隔数所在的索引</span></span><br><span class="line">        sort(a,lo,partition-<span class="number">1</span>);</span><br><span class="line">        sort(a,partition+<span class="number">1</span>,hi);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span> lo,<span class="keyword">int</span> hi)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = lo;</span><br><span class="line">        <span class="keyword">int</span> right = hi + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> key = a[lo];</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="comment">//如果选取数组中元素第一个值为key值，则要先进行右指针遍历，这样左右指针相等时，和分解数组第一个数交换，保持分界值左边的数小于分界值</span></span><br><span class="line">            <span class="keyword">while</span>(!(a[--right]&lt;key))&#123;</span><br><span class="line">                <span class="keyword">if</span>(left&gt;=right)&#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果左指针所指的数大于key，则跳出</span></span><br><span class="line">            <span class="keyword">while</span>(!(a[++left]&gt;=key))&#123;</span><br><span class="line">                <span class="keyword">if</span>(left&gt;=right)&#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">			<span class="comment">//交换数组中左右指针所指值的位置</span></span><br><span class="line">            <span class="keyword">if</span>(left&gt;=right)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp = a[left];</span><br><span class="line">                a[left] = a[right];</span><br><span class="line">                a[right] = temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//交换数组中key值与right指针处值的位置，以此达到分割的目的</span></span><br><span class="line">        temp = a[right];</span><br><span class="line">        a[right] = a[lo];</span><br><span class="line">        a[lo] = temp;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> right;<span class="comment">//返回的一定时右指针，左右指针在遍历完成后不一定相等</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<h5 id="1-3-输出结果："><a href="#1-3-输出结果：" class="headerlink" title="1.3 输出结果："></a>1.3 输出结果：</h5><p><img src="/2022/01/07/%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/image-20220107214143293.png" alt="image-20220107214143293"></p>
-<h5 id="1-4-时间复杂度分析分析"><a href="#1-4-时间复杂度分析分析" class="headerlink" title="1.4 时间复杂度分析分析"></a>1.4 时间复杂度分析分析</h5><p>​        快速排序的一次切分从两头开始交替搜索(选取第一个元素为分隔元素的话，最好先右再左)，指导left和right重合，因此一次切分算法的时间复杂度为O(n),但整个快速排序的时间复杂度和切分的次数有关。</p>
-<p>​        平均情况：每次分成两段，那么分的次数就是logn了，每一次处理需要n次计算，那么时间复杂度就是nlogn。</p>
-<p>​        最坏情况：最坏是O(n^2).这种情况就是数组刚好的倒序，然后每次取key的时候都是取最大或者最小值，这样分的次数是n，每一次处理也是n。        </p>
-<p>​        快速排序不是稳定的排序算法（稳定的排序算法，即几个相同的元素在排序前后他们的大小顺序是不变的，而快排则可能会导致其顺序发生变化），下面有一种思路实现稳定的快速排序算法，简单的说就是新建一个数组用来存放排序的结果，相当于是牺牲空间换取稳定性的的一种改进排序。</p>
-<h3 id="二-稳定快速排序"><a href="#二-稳定快速排序" class="headerlink" title="二 稳定快速排序"></a>二 稳定快速排序</h3><h5 id="2-1-原理"><a href="#2-1-原理" class="headerlink" title="2.1 原理"></a>2.1 原理</h5><p>​        一般的快速排序为不稳定的，如果实现稳定的快速排序，则需要在partition过程中进下特殊的处理，其中一种方法是另为申请一段空间B，在原来的数据空间A中，选取第一个元素flag为中间数据，首先遍历空间A，将所有小于flag的元素依次放入空间B中，然后将flag放入B中，再次遍历空间B，将所有大于等于flag的元素依次放入空间B中，最后重新将空间B的数据全部拷贝到空间A中。</p>
-<h3 id="三-补充"><a href="#三-补充" class="headerlink" title="三 补充"></a>三 补充</h3><h4 id="3-1-时间复杂度"><a href="#3-1-时间复杂度" class="headerlink" title="3.1 时间复杂度"></a>3.1 时间复杂度</h4><p>一个算法中的语句执行次数称为语句频度或时间频度。记为T(n)。前面提到的时间频度T(n)中，n称为问题的规模，当n不断变化时，时间频度T(n)也会不断变化。但有时我们想知道它变化时呈现什么规律，为此我们引入时间复杂度的概念。一般情况下，算法中基本操作重复执行的次数是问题规模n的某个函数，用T(n)表示，若有某个辅助函数f(n)，使得当n趋近于无穷大时，T（n)/f(n)的极限值为不等于零的常数，则称f(n)是T(n)的同数量级函数，记作T(n)=O(f(n))，它称为算法的渐进时间复杂度，简称时间复杂度。</p>
-<p>像前面用O( )来体现算法时间复杂度的记法，我们称之为大O表示法。大O表示法O(f(n)中的f(n)的值可以为1、n、logn、n²等，因此我们可以将O(1)、O(n)、O(logn)、O(n²)分别可以称为常数阶、线性阶、对数阶和平方阶。</p>
-<p>若对于一个算法，T(n)的上界与输入大小无关，则称其具有<strong>常数时间</strong>，记作O(1)时间。一个例子是访问数组中的单个元素，因为访问它只需要一条指令。</p>
-<h4 id="3-2-冒泡排序"><a href="#3-2-冒泡排序" class="headerlink" title="3.2 冒泡排序"></a>3.2 冒泡排序</h4><p>基本思想：依次比较相邻两个数的大小，符合条件则交换位置，一次遍历会产生一个最值，然后在剩余的元素中继续比较。</p>
-<p>冒泡排序就是把小的元素往前调或者把大的元素往后调。比较是相邻的两个元素比较，交换也发生在这两个元素之间。所以，如果两个元素相等，我想你是不会再无聊地把他们俩交换一下的；如果两个相等的元素没有相邻，那么即使通过前面的两两交换把两个相邻起来，这时候也不会交换，所以相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubble</span><span class="params">(<span class="keyword">int</span>[] a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;a.length-<span class="number">1</span>-i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[j]&gt;a[j+<span class="number">1</span>])&#123;</span><br><span class="line">                temp = a[j];</span><br><span class="line">                a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">                a[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/07/%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Java Lamda" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/30/Java%20Lamda/">my first blog</a>
-    </h1>
-  
-
-        
-        <a href="/2021/12/30/Java%20Lamda/" class="archive-article-date">
-  	<time datetime="2021-12-30T10:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Lamda表达式"><a href="#Lamda表达式" class="headerlink" title="Lamda表达式"></a>Lamda表达式</h3><pre><code>Lambda表达式是Java SE 8中一个重要的新特性，是一种函数式编程的思想，即只关注函数的参数列表和对函数操作代码块即可，可以看成是匿名内部类的一个简化形式。
-</code></pre>
-<hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/12/30/Java%20Lamda/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -452,9 +214,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
